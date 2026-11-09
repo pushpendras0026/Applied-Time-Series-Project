@@ -34,8 +34,8 @@ Rscript run_all.R --workers 16        # or: ./reproduce.ps1 -Workers 16 ; sh rep
 The steps can also be run one by one with `Rscript <script>`. `tools/progress.R`
 shows the progress of a running `run.R`.
 
-On the reference machine (16 physical cores, 16 workers) the full chain takes a few hours.
-With one worker the main run takes much longer.
+The recorded model-fitting time of the final run is about 3.8 CPU-hours in total
+(`tables/timing.csv`), spread over the workers; with one worker it all runs in sequence.
 
 ## Reproducibility
 

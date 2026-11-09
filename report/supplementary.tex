@@ -13,6 +13,11 @@
 
 \usepackage[accepted]{icml2018}
 
+% course report, not an ICML publication: replace the "appearing in" footnote
+\makeatletter
+\renewcommand{\ICML@appearing}{DA-3041 Applied Time Series Analysis course project, IIT Guwahati, 2026.}
+\makeatother
+
 \icmltitlerunning{Supplementary Material: Wavelet + ARMA--GARCH Volatility Forecasting}
 
 \begin{document}
@@ -30,6 +35,8 @@
 
 \icmlaffiliation{iitg}{Indian Institute of Technology Guwahati, India. DA-3041 Applied Time Series Analysis, Group 9}
 
+\icmlcorrespondingauthor{Pushpendra Singh}{github.com/pushpendras0026}
+
 \vskip 0.3in
 ]
 
@@ -43,7 +50,7 @@ All code, data, configuration, tests and result tables are here:
 \url{https://github.com/pushpendras0026/Applied-Time-Series-Project}
 \end{center}
 
-The repository README explains how to run everything with one command (\texttt{Rscript run\_all.R --workers 16}). It needs only R 4.6 with the recommended package \texttt{nnet}, no internet. The run first does the unit and leakage tests, then all forecasts, then the tables and figures, then the innovation-distribution experiment. With 16 workers it takes a few hours; with one worker much longer. The bulky raw forecast files are stored as zip files in the repository and only need to be unzipped if you want to re-make the tables without re-running the models.
+The repository README explains how to run everything with one command (\texttt{Rscript run\_all.R --workers 16}). It needs only R 4.6 with the recommended package \texttt{nnet}, no internet. The run first does the unit and leakage tests, then all forecasts, then the tables and figures, then the innovation-distribution experiment. The recorded model-fitting time of the final run is about 3.8 CPU-hours in total, spread over the workers. The bulky raw forecast files are stored as zip files in the repository and only need to be unzipped if you want to re-make the tables without re-running the models.
 
 \section{How to implement the method}
 
